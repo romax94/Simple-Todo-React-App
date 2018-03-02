@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import List from './List.js';
-import './App.css';
-
 
 export default class APP extends Component {
     constructor(props) {
@@ -12,6 +10,7 @@ export default class APP extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleChange(e) {
@@ -32,6 +31,13 @@ export default class APP extends Component {
         }));
     }
 
+    handleDelete(id) {
+        let newState = this.state.items.filter(item => item.id !== id);
+        this.setState({
+            items: newState
+        });
+    }
+
     render() {
         return (
             <div className="app_wrapper">
@@ -49,7 +55,10 @@ export default class APP extends Component {
                         className="app_form_submit"
                     />
                 </form>
-                <List items={this.state.items} />
+                <List
+                    items={this.state.items}
+                    handleDelete={this.handleDelete}
+                />
             </div>
         )
     }

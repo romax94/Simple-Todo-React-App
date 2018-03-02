@@ -3,3 +3,39 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.app_wrapper {
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+.app_form_text {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 5px;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  outline: none;
+}
+.app_form_submit {
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s ease;
+}
+.app_form_submit:hover {
+  transform: scale(1.1);
+}
+.app_list_item {
+  position: relative;
+  list-style-type: none;
+}
+.app_item_delete {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
