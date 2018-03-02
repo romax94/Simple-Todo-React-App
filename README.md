@@ -1,4 +1,4 @@
-# ToDo React App
+# Simple-Todo-React-App
 
 ## Getting started
 ```
